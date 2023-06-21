@@ -10,8 +10,9 @@ class HotPicks extends StatefulWidget {
 class _HotPicksState extends State<HotPicks> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
+    return Scaffold(
+      backgroundColor: Colors.grey[300],
+      body: const Center(
         child: Text('Hot Picks'),
       ),
     );

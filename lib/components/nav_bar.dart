@@ -11,10 +11,10 @@ class NavBar extends StatelessWidget {
       padding: EdgeInsets.all(20),
       child: GNav(
         color: Colors.grey[400],
-        activeColor: Colors.grey[700],
-        rippleColor: Colors.blueGrey,
-        tabActiveBorder: Border.all(color: Colors.white),
-        tabBackgroundColor: Colors.grey.shade100,
+        activeColor: Colors.black,
+        rippleColor: Colors.grey,
+        tabActiveBorder: Border.all(color: Colors.grey.shade100),
+        tabBackgroundColor: Colors.grey.shade200,
         mainAxisAlignment: MainAxisAlignment.center,
         tabBorderRadius: 0,
 
