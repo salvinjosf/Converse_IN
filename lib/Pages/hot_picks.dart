@@ -1,3 +1,4 @@
+import 'package:converse_in/models/brands.dart';
 import 'package:flutter/material.dart';
 
 import '../components/brand_tile.dart';
@@ -65,8 +66,16 @@ class _HotPicksState extends State<HotPicks> {
 
         Expanded(
           child: ListView.builder(
+            itemCount: 3,
+            scrollDirection: Axis.horizontal,
             itemBuilder: (context, index) {
-              return BrandTile(: null,);
+              Brands brands = Brands(
+                  name: 'Converse',
+                  price: 'Starting from \$220',
+                  img: 'lib/assets/Converse-logo.png');
+              return BrandTile(
+                brands: brands,
+              );
             },
           ),
         ),
