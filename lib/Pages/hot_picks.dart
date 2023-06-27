@@ -1,5 +1,6 @@
 import 'package:converse_in/models/brands.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 import '../components/brand_tile.dart';
 
