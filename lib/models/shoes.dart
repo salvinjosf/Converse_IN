@@ -1,13 +1,29 @@
 import 'package:converse_in/models/brands.dart';
+import 'package:flutter/material.dart';
 
-class Shoes {
+class Shoes extends ChangeNotifier{
   List<Brands> shoeShop = [
-    Brands(name: 'Converse', price: '220', img: 'lib/assets/Converse-logo.png'),
-    Brands(name: 'Nike', price: '236', img: 'lib/assets/nike-logo.png'),
-    Brands(name: 'Adidas', price: '241', img: 'lib/assets/adidas-logo.png')
+    Brands(name: 'Peanuts Chuck 70', price: '\$119', img: 'lib/assets/peanuts.jpg'),
+    Brands(name: 'ADER ERROR Chuck 70', price: '\$176', img: 'lib/assets/ader_error.jpg'),
+    Brands(name: 'A-COLD-WALL', price: '\$162', img: 'lib/assets/cold_wall.png')
   ];
 
   List<Brands>getShoeBrands(){
     return shoeShop;
+  }
+  List<Brands> userCart = [];
+
+  List<Brands>getUserCart(){
+    return userCart;
+  }
+
+  void addItem(Brands brands){
+    userCart.add(brands);
+    notifyListeners();
+  }
+
+  void removeItem(Brands brands){
+    userCart.remove(brands);
+    notifyListeners();
   }
 }

@@ -17,6 +17,7 @@ class NavBar extends StatelessWidget {
         tabBackgroundColor: Colors.grey.shade200,
         mainAxisAlignment: MainAxisAlignment.center,
         tabBorderRadius: 0,
+        gap: 5,
 
         onTabChange: (value) => onTabChange!(value),
 

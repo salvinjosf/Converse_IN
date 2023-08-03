@@ -1,3 +1,4 @@
+import 'package:converse_in/components/cart_item.dart';
 import 'package:converse_in/components/nav_bar.dart';
 import 'package:flutter/material.dart';
 
@@ -60,29 +61,45 @@ class _HomePageState extends State<HomePage> {
                 color: Colors.grey.shade900,
               ),
             ),
-            const Padding(
-              padding: EdgeInsets.only(left: 20.0),
-              child: ListTile(
-                leading: Icon(
-                  Icons.home,
-                  color: Colors.white,
+            InkWell(
+              onTap: () => Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const HomePage(),
                 ),
-                title: Text(
-                  "Home",
-                  style: TextStyle(color: Colors.white),
+              ),
+              child: const Padding(
+                padding: EdgeInsets.only(left: 20.0),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.home,
+                    color: Colors.white,
+                  ),
+                  title: Text(
+                    "Home",
+                    style: TextStyle(color: Colors.white),
+                  ),
                 ),
               ),
             ),
-            const Padding(
-              padding: EdgeInsets.only(left: 20.0),
-              child: ListTile(
-                leading: Icon(
-                  Icons.shopping_cart,
-                  color: Colors.white,
+            InkWell(
+              onTap: () => Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => HomePage(),
                 ),
-                title: Text(
-                  "Orders",
-                  style: TextStyle(color: Colors.white),
+              ),
+              child: const Padding(
+                padding: EdgeInsets.only(left: 20.0),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.shopping_cart,
+                    color: Colors.white,
+                  ),
+                  title: Text(
+                    "Orders",
+                    style: TextStyle(color: Colors.white),
+                  ),
                 ),
               ),
             ),
